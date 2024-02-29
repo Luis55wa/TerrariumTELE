@@ -1,0 +1,79 @@
+<!-- HTML Terrario TELE -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ESP IOT DASHBOARD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="topnav">
+        <h1>Terrario Anolis lagartosauria</h1>
+    </div>
+  
+  
+  
+  <div class="content">
+        <div class="card-grid">
+            <div class="card">
+                <p class="card-title">Sensores</p>
+                <p class="switch">
+                  <p class="state"><b>Temperatura:</b> <span id="tempValue"></span> &#8451;</p>
+              <p class="state"><b>Humedad: </b><span id="humValue"></span> &#37;</p>
+            </div>
+          
+          
+  
+        <div class="card-grid">
+            <div class="card"><br><br><div class="toggle">
+  				<span class="card-title">Radiación:</span> <input class="toggle-checkbox" type="checkbox" checked>
+  				<div class="toggle-switch"></div>
+				</div>
+              	<div> <br></div>
+              
+            <div class="toggle">
+  				<span class="card-title">Niebla:</span> <input class="toggle-checkbox" type="checkbox" checked>
+  				<div class="toggle-switch"></div>
+				</div>
+			</div>	
+    		</div>
+   			</div>
+  		</div>
+   
+  
+          
+    <div class="content">
+        <div class="card-grid">
+            <div class="card">
+                <p class="card-title">Ventilación</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider1" min="0" max="100" step="1" value ="0" class="slider">
+                </p>
+                <p class="state">Potencia: <span id="sliderValue1"></span> &percnt;</p>
+            </div>
+          
+            <div class="card">
+                <p class="card-title"> Foco 1</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider2" min="0" max="100" step="1" value ="0" class="slider">
+                </p>
+                <p class="state">Intensidad: <span id="sliderValue2"></span> &percnt;</p>
+            </div>
+            <div class="card">
+                <p class="card-title"> Foco 2</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider3" min="0" max="100" step="1" value ="0" class="slider">
+                </p>
+                <p class="state">Intencidad: <span id="sliderValue3"></span> &percnt;</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+         
+  
+  
+          
+</body>
+</html>
+
